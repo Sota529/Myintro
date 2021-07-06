@@ -4,7 +4,7 @@ import { VFC } from "react";
 
 export const BlogListItem: VFC = (props: any) => {
   const router = useRouter();
-  const handleClick = (id: string) => {
+  const handleClick = async (id: string) => {
     router.push(`/blog/${id}`);
   };
   return (

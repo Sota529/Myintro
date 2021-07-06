@@ -75,8 +75,13 @@ const Home: NextPage = ({ posts }: any) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:4000/posts");
-  const posts = await res.json();
+  const res = await fetch("https://sotan.microcms.io/api/v1/posts", {
+    headers: {
+      "X-API-KEY": "8ed0d579-a537-476c-88be-f7fefbaf7591",
+    },
+  });
+  const result = await res.json();
+  const posts = result.contents;
   return {
     props: { posts },
   };

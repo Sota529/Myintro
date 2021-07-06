@@ -2,7 +2,10 @@ import { List } from "@chakra-ui/react";
 import { VFC } from "react";
 import { BlogListItem } from "./BlogListItem";
 
-export const BlogList: VFC = (props: any) => {
+type Props={
+  posts:any
+}
+export const BlogList: VFC<Props> = (props) => {
   return (
     <List spacing="1.2em">
       {props.posts.map((post: any) => {
