@@ -9,7 +9,7 @@ import { Box, Heading, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
 import { BlogList } from "../components/BlogList";
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ posts }: any) => {
   return (
     <>
       <Layout>
@@ -66,12 +66,20 @@ const Home: NextPage = () => {
           ブログ
         </Heading>
         <Box mt="23px">
-          <BlogList />
+          <BlogList posts={posts} />
         </Box>
       </Layout>
       <Footer />
     </>
   );
 };
+
+export async function getStaticProps() {
+  const res = await fetch("http://localhost:4000/posts");
+  const posts = await res.json();
+  return {
+    props: { posts },
+  };
+}
 
 export default Home;

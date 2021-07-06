@@ -1,9 +1,14 @@
 import { ListItem, Box, Heading } from "@chakra-ui/react";
+import { useRouter } from "next/dist/client/router";
 import { VFC } from "react";
 
-export const BlogListItem: VFC = () => {
+export const BlogListItem: VFC = (props: any) => {
+  const router = useRouter();
+  const handleClick = (id: string) => {
+    router.push(`/blog/${id}`);
+  };
   return (
-    <ListItem>
+    <ListItem onClick={() => handleClick(props.id)}>
       <Box
         display="flex"
         boxShadow="md"
@@ -17,7 +22,7 @@ export const BlogListItem: VFC = () => {
         _hover={{ cursor: "pointer", boxShadow: "none" }}
       >
         <Heading as="h2" size="md" pl="8px" mx="auto">
-          ブログ始めました！
+          {props.title}
         </Heading>
       </Box>
     </ListItem>
