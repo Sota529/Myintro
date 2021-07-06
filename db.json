@@ -1,0 +1,10 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "day": "2020/07/05",
+      "content": "ブログ始めてみました。JAMStackで開発しました！"
+    }
+  ]
+}
