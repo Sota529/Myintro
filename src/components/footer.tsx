@@ -3,9 +3,15 @@ import { VFC } from "react";
 
 export const Footer: VFC = () => {
   return (
-    <Box h="100px" bg="gray.200">
+    <Box
+      h="200px"
+      bg="gray.200"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
       <footer>
-        <small lang="en">@ 2021</small>
+        <small lang="en">©2021 Sota Hirose All Rights Reserved</small>
       </footer>
     </Box>
   );
