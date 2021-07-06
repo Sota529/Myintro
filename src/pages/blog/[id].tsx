@@ -1,9 +1,11 @@
 import { NextPage } from "next";
 import { Heading, Text } from "@chakra-ui/layout";
 import { Layout } from "../../components/Layout";
+import { Footer } from "../../components/Footer";
 
 const Id: NextPage = ({ post }: any) => {
   return (
+    <>
     <Layout>
       <Heading as="h1" fontSize="32px" textAlign="center" mt="120px">
         {post.title}
@@ -12,6 +14,8 @@ const Id: NextPage = ({ post }: any) => {
         {post.content}
       </Text>
     </Layout>
+    <Footer/>
+    </>
   );
 };
 
