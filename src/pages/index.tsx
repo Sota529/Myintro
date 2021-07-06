@@ -1,12 +1,13 @@
 import { NextPage } from "next";
-import { Layout } from "../components/layout";
-import { Footer } from "../components/footer";
-import { Header } from "../components/header";
+import { Layout } from "../components/Layout";
+import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
 import { Twitter } from "../Icon/twitter";
 import { Github } from "../Icon/github";
 import { Wantedly } from "../Icon/wantedly";
 import { Box, Heading, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
+import { BlogList } from "../components/BlogList";
 
 const Home: NextPage = () => {
   return (
@@ -56,10 +57,16 @@ const Home: NextPage = () => {
               <Box mt="8px">
                 <Twitter />
                 <Github />
-                <Wantedly/>
+                <Wantedly />
               </Box>
             </Box>
           </Box>
+        </Box>
+        <Heading textAlign="center" fontSize="32px" mt="120px">
+          ブログ
+        </Heading>
+        <Box mt="23px">
+          <BlogList />
         </Box>
       </Layout>
       <Footer />
