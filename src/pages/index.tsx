@@ -1,7 +1,7 @@
 import { NextPage } from "next";
-import { Layout } from "../components/Layout";
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
+import { Layout } from "../components/_Layout";
+import { Footer } from "../components/_Footer";
+import { Header } from "../components/_Header";
 import { Twitter } from "../Icon/twitter";
 import { Github } from "../Icon/github";
 import { Wantedly } from "../Icon/wantedly";

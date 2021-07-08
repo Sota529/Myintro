@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import { Heading, Text } from "@chakra-ui/layout";
-import { Footer } from "../../components/Footer";
-import { Layout } from "../../components/Layout";
+import { Footer } from "../../components/_Footer";
+import { Layout } from "../../components/_Layout";
 
 const Id: NextPage = ({ post }: any) => {
   const createMarkup = () => {
