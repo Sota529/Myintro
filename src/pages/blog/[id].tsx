@@ -1,17 +1,22 @@
 import { NextPage } from "next";
 import { Heading, Text } from "@chakra-ui/layout";
+import { Footer } from "../../components/Footer";
 import { Layout } from "../../components/Layout";
 
 const Id: NextPage = ({ post }: any) => {
+  const createMarkup = () => {
+    return { __html: post.content };
+  };
   return (
-    <Layout>
-      <Heading as="h1" fontSize="32px" textAlign="center" mt="120px">
-        {post.title}
-      </Heading>
-      <Text fontSize="24px" mt="24px">
-        {post.content}
-      </Text>
-    </Layout>
+    <>
+      <Layout>
+        <Heading as="h1" fontSize="32px" textAlign="center" mt="120px">
+          {post.title}
+        </Heading>
+        <div dangerouslySetInnerHTML={createMarkup()}></div>
+      </Layout>
+      <Footer />
+    </>
   );
 };
 
