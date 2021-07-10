@@ -14,7 +14,10 @@ const Id: NextPage = ({ post }: any) => {
         <Heading as="h1" fontSize="32px" textAlign="center" mt="120px">
           {post.title}
         </Heading>
-        <div className={styles.content} dangerouslySetInnerHTML={createMarkup()}></div>
+        <div
+          className={styles.content}
+          dangerouslySetInnerHTML={createMarkup()}
+        ></div>
       </Layout>
       <Footer />
     </>
