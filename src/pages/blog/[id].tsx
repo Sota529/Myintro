@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { Heading, Badge } from "@chakra-ui/layout";
+import { Heading, Badge, Box } from "@chakra-ui/layout";
 import { Footer } from "../../components/Footer";
 import { Layout } from "../../components/Layout";
 import styles from "../../../style/id.module.scss";
@@ -15,11 +15,13 @@ const Id: NextPage = ({ post }: any) => {
       <Layout>
         <Heading as="h1" fontSize="32px" textAlign="center" mt="120px">
           {post.title}
+        </Heading>
+        <Box mt="16px">
           <Badge colorScheme="green">{`作成日 ${createday}`}</Badge>
           <Badge colorScheme="blue" ml="2px">
             {`${updateday}更新`}
           </Badge>
-        </Heading>
+        </Box>
         <div
           className={styles.content}
           dangerouslySetInnerHTML={createMarkup()}
