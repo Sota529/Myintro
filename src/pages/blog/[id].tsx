@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import { Heading, Text } from "@chakra-ui/layout";
 import { Footer } from "../../components/Footer";
 import { Layout } from "../../components/Layout";
+import styles from "../../../style/id.module.scss";
 
 const Id: NextPage = ({ post }: any) => {
   const createMarkup = () => {
@@ -13,7 +14,7 @@ const Id: NextPage = ({ post }: any) => {
         <Heading as="h1" fontSize="32px" textAlign="center" mt="120px">
           {post.title}
         </Heading>
-        <div dangerouslySetInnerHTML={createMarkup()}></div>
+        <div className={styles.content} dangerouslySetInnerHTML={createMarkup()}></div>
       </Layout>
       <Footer />
     </>
