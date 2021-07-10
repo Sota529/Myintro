@@ -1,6 +1,6 @@
 .content {
   font-size: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   h1 {
     font-size: 28px;
     margin: 12px 0 0;
@@ -18,5 +18,12 @@
     background-color: #fff;
     color: #ff357f;
     margin: 0 2px;
+  }
+  a {
+    vertical-align: baseline;
+    background: transparent;
+    color: #3067af;
+    border: 1px solid #ddd;
+    text-decoration: none;
   }
 }
