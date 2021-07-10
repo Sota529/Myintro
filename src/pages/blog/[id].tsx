@@ -1,10 +1,12 @@
 import { NextPage } from "next";
-import { Heading, Text } from "@chakra-ui/layout";
+import { Heading, Badge } from "@chakra-ui/layout";
 import { Footer } from "../../components/Footer";
 import { Layout } from "../../components/Layout";
 import styles from "../../../style/id.module.scss";
 
 const Id: NextPage = ({ post }: any) => {
+  const createday = post.createdAt.slice(0, 10);
+  const updateday = post.updatedAt.slice(0, 10);
   const createMarkup = () => {
     return { __html: post.content };
   };
@@ -13,6 +15,10 @@ const Id: NextPage = ({ post }: any) => {
       <Layout>
         <Heading as="h1" fontSize="32px" textAlign="center" mt="120px">
           {post.title}
+          <Badge colorScheme="green">{`作成日 ${createday}`}</Badge>
+          <Badge colorScheme="blue" ml="2px">
+            {`${updateday}更新`}
+          </Badge>
         </Heading>
         <div
           className={styles.content}
